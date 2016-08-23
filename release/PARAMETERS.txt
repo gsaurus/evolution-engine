@@ -1,0 +1,54 @@
+1	// FACING WHEN HIT - when got hit, face to the hitter
+1	// REALIST FACING WHEN HIT - when got hit, face to the point where it was hit, rather than just to the hitter
+
+6000	// LIFEBAR
+
+
+10.	// VELOCITY DIVIDER		- shouldn't be changed
+4.	// ROTATIONAL VEL DIVIDER	- shouldn't be changed
+
+
+
+
+0.75	// VERTICAL VEL FACTOR	 - it moves slower when moving up/down
+
+0	// AIR CONTROL	- moving when jumping
+1.0	// JUMP IMPULSE FACTOR - how much of the "walk/run" speed is given when jump
+0.5	// ELASTICITY	- how much of the previous speed is keep after bounce
+
+20	// RUN TIME - the maximum time interval to accept 2 forward keys as a running move
+25	// ATTACK TIME - the maximum time interval to accept the next combo in a row
+
+40	// KNOCK TIME - the time required to hold the knocking key in order to activates the knock move
+
+24	// GRAB X SPACE - the maximum space between characters to accept a grab, in the X axis
+1.0	// GRAB X BACK FACTOR - how much of the grab x space is considered when wrong faced
+15	// GRAB Y SPACE - the maximum space between characters to accept a grab, in the Z axis
+
+
+
+-0.26	// GRAVITY
+
+1.5	// FALLING LIMIAR	- the minimum speed to considere that a character is in descendent move
+0.25	// MINIMUM FLIP ATTACK	- when flip over someone, you can do throw attack (skate for example) after passing this time
+
+0.75	// MAXIMUM FLIP ATTACK	- when flip over someone, you can only do a throw attack until this time passes
+
+3.	// JUMP SPECIAL MAX SPEED - maximum air Y speed to still allow a jump special.
+
+9	// HIT PAUSE	- time that character pauses when hit someone
+9	// KNOCK PAUSE	- time that character pauses when knocks someone
+15	// GRAB_PAUSE	- time that character have to wait before grab, after hitting someone
+8	// AFTER_ATTACK_PAUSE - time to wait before move, after an attack move
+
+15	// RECOVER TIME	- time to ignore hits when recovering from a knock (invincible state for few time)
+25	// UNGRAB TIME	- time needed before ungrab when pressing back
+
+
+2	// GROUND BOUNCE VEL - Y velocity given when character bounces on the ground
+
+2	// KNOCKED X VEL - velocity applyed on a knock, in x axis
+4	// KNOCKED Y VEL - velocity applyed on a knock, in y axis
+
+-2.5	// BLOCK HIT VEL  - velocity applied when being hit during a block
+5	// BLOCK HIT TIME - time to move back when being hit during a block

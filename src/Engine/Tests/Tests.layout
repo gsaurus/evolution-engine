@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Release" />
+	<File name="HashTests.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="742" topLine="19" />
+	</File>
+	<File name="MainTest.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="7299" topLine="302" />
+	</File>
+</CodeBlocks_layout_file>

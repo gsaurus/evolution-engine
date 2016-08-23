@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Game" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\game-d" prefix_auto="0" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj\Debug\" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add option="..\Core\bin\core-d.a" />
+					<Add option="..\Files\bin\files-d.a" />
+					<Add option="..\Invariants\bin\invariants-d.a" />
+					<Add option="..\Utilities\bin\utilities-d.a" />
+					<Add option="-lsfml-audio-s-d" />
+					<Add option="-lsfml-graphics-s-d" />
+					<Add option="-lsfml-window-s-d" />
+					<Add option="-lsfml-system-s-d" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\game" prefix_auto="0" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj\Release\" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="..\Core\bin\core.a" />
+					<Add option="..\Files\bin\files.a" />
+					<Add option="..\Invariants\bin\invariants.a" />
+					<Add option="..\Utilities\bin\utilities.a" />
+					<Add option="-lsfml-audio-s" />
+					<Add option="-lsfml-graphics-s" />
+					<Add option="-lsfml-window-s" />
+					<Add option="-lsfml-system-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="AEventAttendant.h" />
+		<Unit filename="CharacterController.cpp" />
+		<Unit filename="CharacterController.h" />
+		<Unit filename="Game.cpp" />
+		<Unit filename="GamePlay.h" />
+		<Unit filename="InGameAttendant.cpp" />
+		<Unit filename="InGameAttendant.h" />
+		<Unit filename="StateController.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

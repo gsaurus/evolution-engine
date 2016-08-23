@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="ASpriteController.cpp" open="0" top="0" tabpos="7">
+		<Cursor position="477" topLine="15" />
+	</File>
+	<File name="ASpriteController.h" open="0" top="0" tabpos="1">
+		<Cursor position="454" topLine="3" />
+	</File>
+	<File name="ActiveSprite.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="91" topLine="0" />
+	</File>
+	<File name="ActiveSprite.h" open="0" top="0" tabpos="3">
+		<Cursor position="1212" topLine="30" />
+	</File>
+	<File name="Animation.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="3482" topLine="116" />
+	</File>
+	<File name="Animation.h" open="0" top="0" tabpos="3">
+		<Cursor position="1379" topLine="3" />
+	</File>
+	<File name="CharSprite.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="11724" topLine="346" />
+	</File>
+	<File name="CharSprite.h" open="1" top="0" tabpos="2">
+		<Cursor position="5973" topLine="164" />
+	</File>
+	<File name="Character.cpp" open="0" top="0" tabpos="6">
+		<Cursor position="538" topLine="9" />
+	</File>
+	<File name="Character.h" open="0" top="0" tabpos="5">
+		<Cursor position="811" topLine="18" />
+	</File>
+	<File name="CharacterHeader.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="1907" topLine="43" />
+	</File>
+	<File name="CharacterHeader.h" open="0" top="0" tabpos="6">
+		<Cursor position="276" topLine="18" />
+	</File>
+	<File name="CollectionWithFrames.h" open="0" top="0" tabpos="4">
+		<Cursor position="2716" topLine="67" />
+	</File>
+	<File name="DataBase.cpp" open="0" top="0" tabpos="5">
+		<Cursor position="364" topLine="0" />
+	</File>
+	<File name="DataBase.h" open="0" top="0" tabpos="1">
+		<Cursor position="636" topLine="9" />
+	</File>
+	<File name="FixedFrame.h" open="0" top="0" tabpos="0">
+		<Cursor position="0" topLine="3" />
+	</File>
+	<File name="Frame.cpp" open="0" top="0" tabpos="1">
+		<Cursor position="729" topLine="0" />
+	</File>
+	<File name="Frame.h" open="0" top="0" tabpos="3">
+		<Cursor position="395" topLine="33" />
+	</File>
+	<File name="FramesCollection.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="31" topLine="0" />
+	</File>
+	<File name="FramesCollection.h" open="0" top="0" tabpos="0">
+		<Cursor position="111" topLine="0" />
+	</File>
+	<File name="Goodie.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="601" topLine="29" />
+	</File>
+	<File name="Goodie.h" open="0" top="0" tabpos="0">
+		<Cursor position="715" topLine="0" />
+	</File>
+	<File name="GrabPoint.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="771" topLine="22" />
+	</File>
+	<File name="GrabPoint.h" open="0" top="0" tabpos="0">
+		<Cursor position="282" topLine="3" />
+	</File>
+	<File name="HeadPoint.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="299" topLine="0" />
+	</File>
+	<File name="HeadPoint.h" open="0" top="0" tabpos="0">
+		<Cursor position="206" topLine="0" />
+	</File>
+	<File name="HitFrame.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="255" topLine="0" />
+	</File>
+	<File name="HitFrame.h" open="0" top="0" tabpos="0">
+		<Cursor position="511" topLine="13" />
+	</File>
+	<File name="HitInfo.h" open="0" top="0" tabpos="4">
+		<Cursor position="264" topLine="5" />
+	</File>
+	<File name="KeyFrame.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="1307" topLine="35" />
+	</File>
+	<File name="KeyFrame.h" open="0" top="0" tabpos="5">
+		<Cursor position="467" topLine="0" />
+	</File>
+	<File name="Pallet.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="822" topLine="28" />
+	</File>
+	<File name="Pallet.h" open="0" top="0" tabpos="1">
+		<Cursor position="687" topLine="8" />
+	</File>
+	<File name="Point.h" open="0" top="0" tabpos="5">
+		<Cursor position="263" topLine="50" />
+	</File>
+	<File name="SoundEffect.h" open="0" top="0" tabpos="0">
+		<Cursor position="1200" topLine="25" />
+	</File>
+	<File name="Vector3D.h" open="0" top="0" tabpos="4">
+		<Cursor position="409" topLine="0" />
+	</File>
+	<File name="Weapon.cpp" open="0" top="0" tabpos="1">
+		<Cursor position="1064" topLine="42" />
+	</File>
+	<File name="Weapon.h" open="0" top="0" tabpos="0">
+		<Cursor position="491" topLine="0" />
+	</File>
+	<File name="WeaponPoint.cpp" open="0" top="0" tabpos="3">
+		<Cursor position="847" topLine="22" />
+	</File>
+	<File name="WeaponPoint.h" open="0" top="0" tabpos="0">
+		<Cursor position="295" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>

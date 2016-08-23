@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Files" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Option virtualFolders="codecs\;files\;codecs\source\;files\source\;" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\files-d" prefix_auto="0" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj\Debug\" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="..\Utilities\utilities-d.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\files" prefix_auto="0" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj\Release\" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="..\Utilities\utilities.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="ACoDec.cpp">
+			<Option virtualFolder="codecs\source\" />
+		</Unit>
+		<Unit filename="ACoDec.h">
+			<Option virtualFolder="codecs\" />
+		</Unit>
+		<Unit filename="ACollection.h">
+			<Option virtualFolder="files\" />
+		</Unit>
+		<Unit filename="AFileResolver.cpp">
+			<Option virtualFolder="files\source\" />
+		</Unit>
+		<Unit filename="AFileResolver.h">
+			<Option virtualFolder="files\" />
+		</Unit>
+		<Unit filename="AReadable.h">
+			<Option virtualFolder="files\" />
+		</Unit>
+		<Unit filename="DataInputStream.cpp">
+			<Option virtualFolder="files\source\" />
+		</Unit>
+		<Unit filename="DataInputStream.h">
+			<Option virtualFolder="files\" />
+		</Unit>
+		<Unit filename="DataOutputStream.cpp">
+			<Option virtualFolder="files\source\" />
+		</Unit>
+		<Unit filename="DataOutputStream.h">
+			<Option virtualFolder="files\" />
+		</Unit>
+		<Unit filename="IOException.h">
+			<Option virtualFolder="files\" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="NoCoDec.cpp">
+			<Option virtualFolder="codecs\source\" />
+		</Unit>
+		<Unit filename="NoCoDec.h">
+			<Option virtualFolder="codecs\" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

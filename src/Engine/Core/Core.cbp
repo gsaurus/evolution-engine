@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Core" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Option virtualFolders="database\;database\source\;hardData\;hardData\source\;sprites\;sprites\source\;utils\;hardData\characters\source\;hardData\characters\;" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\core-d" prefix_auto="0" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj\Debug\" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add option="..\Files\bin\files-d.a" />
+					<Add option="..\Invariants\bin\invariants-d.a" />
+					<Add option="..\Utilities\utilities-d.a" />
+					<Add option="-lsfml-audio-s-d" />
+					<Add option="-lsfml-graphics-s-d" />
+					<Add option="-lsfml-window-s-d" />
+					<Add option="-lsfml-system-s-d" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\core" prefix_auto="0" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj\Release\" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="..\Files\bin\files.a" />
+					<Add option="..\Invariants\bin\invariants.a" />
+					<Add option="..\Utilities\utilities.a" />
+					<Add option="-lsfml-audio-s" />
+					<Add option="-lsfml-graphics-s" />
+					<Add option="-lsfml-window-s" />
+					<Add option="-lsfml-system-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="ASpriteController.cpp">
+			<Option virtualFolder="sprites\source\" />
+		</Unit>
+		<Unit filename="ASpriteController.h">
+			<Option virtualFolder="sprites\" />
+		</Unit>
+		<Unit filename="ActiveSprite.cpp">
+			<Option virtualFolder="sprites\source\" />
+		</Unit>
+		<Unit filename="ActiveSprite.h">
+			<Option virtualFolder="sprites\" />
+		</Unit>
+		<Unit filename="Animation.cpp">
+			<Option virtualFolder="hardData\characters\source\" />
+		</Unit>
+		<Unit filename="Animation.h">
+			<Option virtualFolder="hardData\characters\" />
+		</Unit>
+		<Unit filename="CharSprite.cpp">
+			<Option virtualFolder="sprites\source\" />
+		</Unit>
+		<Unit filename="CharSprite.h">
+			<Option virtualFolder="sprites\" />
+		</Unit>
+		<Unit filename="Character.cpp">
+			<Option virtualFolder="hardData\characters\source\" />
+		</Unit>
+		<Unit filename="Character.h">
+			<Option virtualFolder="hardData\characters\" />
+		</Unit>
+		<Unit filename="CharacterHeader.cpp">
+			<Option virtualFolder="database\source\" />
+		</Unit>
+		<Unit filename="CharacterHeader.h">
+			<Option virtualFolder="database\" />
+		</Unit>
+		<Unit filename="CollectionWithFrames.h">
+			<Option virtualFolder="hardData\" />
+		</Unit>
+		<Unit filename="DataBase.cpp">
+			<Option virtualFolder="database\source\" />
+		</Unit>
+		<Unit filename="DataBase.h">
+			<Option virtualFolder="database\" />
+		</Unit>
+		<Unit filename="FixedFrame.cpp">
+			<Option virtualFolder="hardData\characters\source\" />
+		</Unit>
+		<Unit filename="FixedFrame.h">
+			<Option virtualFolder="hardData\characters\" />
+		</Unit>
+		<Unit filename="Frame.cpp">
+			<Option virtualFolder="hardData\source\" />
+		</Unit>
+		<Unit filename="Frame.h">
+			<Option virtualFolder="hardData\" />
+		</Unit>
+		<Unit filename="FramesCollection.cpp">
+			<Option virtualFolder="hardData\source\" />
+		</Unit>
+		<Unit filename="FramesCollection.h">
+			<Option virtualFolder="hardData\" />
+		</Unit>
+		<Unit filename="Goodie.cpp">
+			<Option virtualFolder="hardData\source\" />
+		</Unit>
+		<Unit filename="Goodie.h">
+			<Option virtualFolder="hardData\" />
+		</Unit>
+		<Unit filename="GrabPoint.cpp">
+			<Option virtualFolder="hardData\characters\source\" />
+		</Unit>
+		<Unit filename="GrabPoint.h">
+			<Option virtualFolder="hardData\characters\" />
+		</Unit>
+		<Unit filename="HeadPoint.cpp">
+			<Option virtualFolder="hardData\characters\source\" />
+		</Unit>
+		<Unit filename="HeadPoint.h">
+			<Option virtualFolder="hardData\characters\" />
+		</Unit>
+		<Unit filename="HitFrame.cpp">
+			<Option virtualFolder="hardData\source\" />
+		</Unit>
+		<Unit filename="HitFrame.h">
+			<Option virtualFolder="hardData\" />
+		</Unit>
+		<Unit filename="HitInfo.h">
+			<Option virtualFolder="sprites\" />
+		</Unit>
+		<Unit filename="KeyFrame.cpp">
+			<Option virtualFolder="hardData\characters\source\" />
+		</Unit>
+		<Unit filename="KeyFrame.h">
+			<Option virtualFolder="hardData\characters\" />
+		</Unit>
+		<Unit filename="Pallet.cpp">
+			<Option virtualFolder="hardData\source\" />
+		</Unit>
+		<Unit filename="Pallet.h">
+			<Option virtualFolder="hardData\" />
+		</Unit>
+		<Unit filename="Point.h">
+			<Option virtualFolder="utils\" />
+		</Unit>
+		<Unit filename="SoundEffect.h">
+			<Option virtualFolder="hardData\" />
+		</Unit>
+		<Unit filename="Vector3D.h">
+			<Option virtualFolder="utils\" />
+		</Unit>
+		<Unit filename="Weapon.cpp">
+			<Option virtualFolder="hardData\source\" />
+		</Unit>
+		<Unit filename="Weapon.h">
+			<Option virtualFolder="hardData\" />
+		</Unit>
+		<Unit filename="WeaponPoint.cpp">
+			<Option virtualFolder="hardData\characters\source\" />
+		</Unit>
+		<Unit filename="WeaponPoint.h">
+			<Option virtualFolder="hardData\characters\" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

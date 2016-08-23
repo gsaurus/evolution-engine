@@ -1,0 +1,374 @@
+/*
+ * topPanel.java
+ *
+ * Created on 26 November 2008, 15:08
+ */
+
+package gui;
+
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.image.BufferedImage;
+
+import javax.swing.SwingUtilities;
+
+import frames.Frame;
+import frames.FramesCollection;
+import frames.IFramesTaker;
+
+import java.awt.BasicStroke;
+import java.awt.Stroke;
+import java.awt.event.MouseWheelEvent;
+
+/**
+ * Panel that holds a FrameCollection, shows them and allows multiple sellections
+ * @author  Gil Costa
+ */
+public class CollectionPanel extends APanelWithScroll implements MouseListener, ComponentListener{
+	/** default version id */
+	private static final long serialVersionUID = 1L;
+
+	//---------------------
+	// ---- CONSTANTS ----
+	//---------------------
+
+    protected static final int STROKE_SIZE = 5;
+	protected static final Color SELECTED_COLOR = Color.GREEN;
+	protected static final Color SELECTED_BACK_COLOR = new Color(0,200,50);
+	protected static final BasicStroke SELECTED_STROKE = new BasicStroke(STROKE_SIZE);
+	
+	protected static final Color GRID_COLOR = Color.BLACK;
+//	private static final int CM_RADIUS = 3;
+//	private static final int CM_SIZE = 2*CM_RADIUS+1;
+
+
+	//------------------
+	// ---- FIELDS ----
+	//------------------
+
+	/** the frame to manipulate */
+	protected FramesCollection collection;
+	protected Dimension dim;    // dimention of one cell
+	protected int selected;
+	
+	IFramesTaker taker;
+
+
+
+
+	// ----------------------------
+	//  ----   CONSTRUCTORS   ----
+	// ----------------------------
+	/** Creates new form FramePanel */
+	public CollectionPanel(Scroller scroller, IFramesTaker taker) {
+		super(scroller);
+		this.taker = taker;
+		initComponents();
+		this.addMouseListener(this);
+        this.setFocusable(false);
+//		this.addMouseMotionListener(this);
+		scroller.addComponentListener(this);
+	}
+
+    public CollectionPanel(Scroller scroller){
+        super(scroller);
+    }
+
+	// -----------------------
+	//  ----   SETTERS   ----
+	// -----------------------
+	/** set frame */
+	public void setCollection(FramesCollection collection){
+		this.collection = collection;
+        if (collection == null) return;
+		recomputeDimensions();
+	}
+
+
+	public void recomputeDimensions(){
+		dim = new Dimension(0,0);
+		for(Frame f:collection){
+			if (f.getImage().getWidth() > dim.width)
+				dim.width = f.getImage().getWidth();
+			if (f.getImage().getHeight() > dim.height)
+				dim.height = f.getImage().getHeight();
+		}
+		componentResized(null);
+	}
+
+	public void select(int id){
+        if (collection == null || collection.isEmpty() || taker == null){
+            repaint();
+            return;
+        }
+        repaintCell(selected);
+		selected = id;
+		if (selected ==-1) selected = collection.size()-1;
+        else if (selected <-1) selected = 0;
+        else if (selected == collection.size()) selected = 0;
+        else if (selected > collection.size()) selected =collection.size()-1;
+		taker.takeFrame(collection.get(selected));
+        
+        int rows = rows();
+        int cols = columns();
+        //double px = (selected%rows)/(cols*1.);
+        //double py = ((selected/cols))/(rows*1.);
+        int px = (selected%rows)*dim.width;
+        int py = (selected/cols)*dim.height;
+        //scroller.setPosition(px,py);
+        //updateSize(px,py);
+		repaintCell(selected);
+	}
+    
+    public void selectNext(){
+        select(selected+1);
+    }
+    public void selectPrevious(){
+        select(selected-1);
+    }
+    public void selectPageDown(){
+        select(selected+columns());
+    }
+    public void selectPageUp(){
+        select(selected-columns());
+    }
+    
+    public void deleteSelected(){
+        if (collection == null || collection.isEmpty()) return;
+        collection.remove(selected);
+        recomputeDimensions();
+        select(selected);
+    }
+
+	// -----------------------
+	//  ----   GETTERS   ----
+	// -----------------------
+	public FramesCollection getCollection(){
+		return collection;
+	}
+	public Frame getSelected(){
+        if (collection == null || collection.isEmpty()) return null;
+		return collection.get(selected);
+	}
+    public int getSelectedNum(){
+        return selected;
+    }
+    
+    public int columns(){
+        if (dim==null) return 0;
+		int dw = (int)(dim.width * scaleFactor);
+		if (dw<=0) dw = 1;
+		return Math.max(getWidth()/dw,1);
+    }
+    
+    public int rows(){
+        if (dim==null) return 0;
+		int dh = (int)(dim.height * scaleFactor);
+		if (dh<=0) dh = 1;
+		return Math.max(getHeight()/dh,1);
+    }
+
+    public int getNumFrames(){
+        if (collection == null) return 0;
+        return collection.size();
+    }
+
+
+
+	/** This method is called from within the constructor to
+	 * initialize the form.
+	 * WARNING: Do NOT modify this code. The content of this method is
+	 * always regenerated by the Form Editor.
+	 */
+	// <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+	private void initComponents() {
+
+		javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+		this.setLayout(layout);
+		layout.setHorizontalGroup(
+				layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+				.addGap(0, 600, Short.MAX_VALUE)
+		);
+		layout.setVerticalGroup(
+				layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+				.addGap(0, 200, Short.MAX_VALUE)
+		);
+	}// </editor-fold>//GEN-END:initComponents
+
+
+
+	// -----------------------------------
+	//  ------   MOUSE LISTENERS   ------
+	// -----------------------------------
+
+	//____________________
+	// ---- DRAGGING ----
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+		if (collection!=null && !collection.isEmpty() && SwingUtilities.isLeftMouseButton(e)){
+			int x = (int)(e.getX()/scaleFactor);
+			int y = (int)(e.getY()/scaleFactor);
+			// get line and collumn
+			x /= dim.width;
+			y /= dim.height;
+			// get the index
+			int dw = Math.max((int)(dim.width * scaleFactor),1);
+			int columns = getWidth()/dw;
+			int index = y*columns + x;
+			select(index);
+		}
+	}
+
+	@Override public void mouseReleased(MouseEvent e) {	}
+	@Override public void mouseEntered(MouseEvent e) { }
+	@Override public void mouseExited(MouseEvent e) { }
+	@Override public void mouseClicked(MouseEvent e) { }
+//	@Override public void mouseMoved(MouseEvent e) { }
+//	@Override public void mouseDragged(MouseEvent e) { }
+
+
+
+
+	// ---------------------------------------
+	//  ------   COMPONENT LISTENERS   ------
+	// ---------------------------------------
+
+    
+    //_______________________
+    // ---- MOUSE WHEEL ----
+	@Override
+	public void mouseWheelMoved(MouseWheelEvent e) {
+        super.mouseWheelMoved(e);
+        componentResized(null);
+    }
+    
+	@Override
+	public void componentResized(ComponentEvent e) {
+        if (collection == null || collection.size() == 0) return;
+        double dw = dim.width*scaleFactor;
+        double dh = dim.height*scaleFactor;
+        if (collection == null || collection.isEmpty()) return;
+		int width = (int)(Math.max(scroller.getWidth()-8,dw));
+        // compute rows
+		int columns = (int)(width/dw);
+		if (columns <= 0) columns = 1;
+		// round up the number of rows
+        double rows = (collection.size()*1.)/columns;
+		if (rows != (int)rows) rows++;
+        int height = (int)(rows*dh);
+		setTrueSize((int)(width/scaleFactor),(int)(height/scaleFactor)); // yes, it's really bad...
+		updateSize(scroller.getWidth()/2,scroller.getHeight()/2);
+        select(selected);
+	}
+	@Override public void componentHidden(ComponentEvent e) { }
+	@Override public void componentMoved(ComponentEvent e) { }
+	@Override public void componentShown(ComponentEvent e) { }
+
+
+
+
+
+
+
+
+
+
+
+	// -----------------------
+	//  ----   REPAINT   ----
+	// -----------------------
+//	public void repaintCM(){
+//	int x = frame.getCM().getX();
+//	int y = frame.getCM().getY();
+//	repaintCursor(x,y);
+//	}
+//	protected void repaintCursor(int x, int y){
+//	repaint(new Rectangle(x-CM_RADIUS,y-CM_RADIUS,CM_SIZE,CM_SIZE));
+//	}
+    
+    public void repaintCell(int index){
+        if (collection == null || collection.isEmpty() || dim == null) return;
+
+		int dw = (int)(dim.width * scaleFactor);
+		int dh = (int)(dim.height * scaleFactor);
+		if (dw<=0) dw = 1;
+		if (dh<=0) dh = 1;
+		int columns = getWidth()/dw;
+		if (columns == 0) columns =1;
+		// draw each frame
+        int imgX = (index%columns)*dw;
+        int imgY = (index/columns)*dh;
+        repaint(imgX-STROKE_SIZE, imgY-STROKE_SIZE, dw+STROKE_SIZE*2, dh+STROKE_SIZE*2);
+    }
+
+
+
+
+	@Override
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		if (collection == null || collection.isEmpty() || dim == null) return;
+
+		int dw = (int)(dim.width * scaleFactor);
+		int dh = (int)(dim.height * scaleFactor);
+		if (dw<=0) dw = 1;
+		if (dh<=0) dh = 1;
+		int columns = getWidth()/dw;
+		if (columns == 0) columns =1;
+		// draw each frame
+		for(int i=0; i< collection.size(); i++){
+			BufferedImage img = collection.get(i).getImage();
+			int imgX = (i%columns)*dw;
+			int imgY = (i/columns)*dh;
+			if (i == selected){
+				// selected frame, draw background first
+				g.setColor(SELECTED_BACK_COLOR);
+				g.fillRect(imgX, imgY, dw, dh);
+			}
+            int imgW = (int)(img.getWidth()*scaleFactor);
+			int imgH = (int)(img.getHeight()*scaleFactor);
+            g.drawImage(img,imgX,imgY,imgW,imgH,this);
+			
+		}
+        g.setColor(GRID_COLOR);
+        // draw grid columns
+        for(int i=0; i<=columns; i++){
+            g.drawLine(i*dw, 0, i*dw, getHeight());
+        }
+        // draw grid rows
+        int rows = getHeight()/dh;
+        for(int i=0; i<=rows; i++){
+            g.drawLine(0, i*dh, getWidth(), i*dh);
+        }
+        
+        // draw a rectangle around the selected image
+        g.setColor(SELECTED_COLOR);
+        Graphics2D g2d = (Graphics2D)g;
+        Stroke old = g2d.getStroke();
+        g2d.setStroke(SELECTED_STROKE);
+        int imgX = (selected%columns)*dw;
+		int imgY = (selected/columns)*dh;
+        g.drawRect(imgX, imgY, dw, dh);
+        g2d.setStroke(old);
+	}
+
+
+
+
+
+
+
+
+
+	// Variables declaration - do not modify//GEN-BEGIN:variables
+	// End of variables declaration//GEN-END:variables
+
+}

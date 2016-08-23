@@ -1,0 +1,225 @@
+# depslib dependency file v1.0
+1234643547 source:c:\documents and settings\gil\os meus documentos\programing\sore\sore\tests\maintest.cpp
+	"../Files/AFileResolver.h"
+	"../Files/DataInputStream.h"
+	"../Files/DataOutputStream.h"
+	"../Files/DataOutputStream.h"
+	"../Files/NoCoDec.h"
+	"../Files/IOException.h"
+	"../Core/FramesCollection.h"
+	"../Core/CollectionWithFrames.h"
+	"../Core/Pallet.h"
+	"../Core/Character.h"
+	"../Core/DataBase.h"
+	"../Core/CharacterHeader.h"
+	"../Core/CharSprite.h"
+	"../Game/CharacterController.h"
+	<iostream>
+	<sstream>
+	<string>
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+
+1234215570 c:\documents and settings\gil\os meus documentos\programing\sore\sore\files\afileresolver.h
+	<SFML/System.hpp>
+	<iostream>
+	"ACoDec.h"
+	"FileUtils.h"
+	"DataInputStream.h"
+	"DataOutputStream.h"
+
+1229710371 c:\documents and settings\gil\os meus documentos\programing\sore\sore\files\acodec.h
+	<string>
+	"IOException.h"
+	"../Utilities/Data.h"
+
+1229509694 c:\documents and settings\gil\os meus documentos\programing\sore\sore\files\data.h
+	"FileUtils.h"
+
+1229442349 c:\documents and settings\gil\os meus documentos\programing\sore\sore\files\fileutils.h
+
+1230385139 c:\documents and settings\gil\os meus documentos\programing\sore\sore\files\datainputstream.h
+	"../Utilities/Data.h"
+	"IOException.h"
+
+1229710003 c:\documents and settings\gil\os meus documentos\programing\sore\sore\files\dataoutputstream.h
+	<vector>
+	"../Utilities/Data.h"
+
+1234215962 c:\documents and settings\gil\os meus documentos\programing\sore\sore\files\acollection.h
+	<vector>
+	"AFileResolver.h"
+
+1229712739 c:\documents and settings\gil\os meus documentos\programing\sore\sore\files\areadable.h
+	"DataInputStream.h"
+	"DataOutputStream.h"
+	"IOException.h"
+
+1234214998 c:\documents and settings\gil\os meus documentos\programing\sore\sore\files\ioexception.h
+	<string>
+	<exception>
+	"FileUtils.h"
+
+1234216086 c:\documents and settings\gil\os meus documentos\programing\sore\sore\core\framescollection.h
+	"../Files/ACollection.h"
+	"Frame.h"
+	"Pallet.h"
+
+1229961297 c:\documents and settings\gil\os meus documentos\programing\sore\sore\core\frame.h
+	<SFML/Graphics.hpp>
+	"../Files/AReadable.h"
+	"Point.h"
+	"Pallet.h"
+
+1229446325 c:\documents and settings\gil\os meus documentos\programing\sore\sore\core\point16.h
+	"../Files/AReadable.h"
+
+1229709952 c:\documents and settings\gil\os meus documentos\programing\sore\sore\files\nocodec.h
+	"ACoDec.h"
+
+1229711089 c:\documents and settings\gil\os meus documentos\programing\sore\sore\utilities\data.h
+	"TypeUtils.h"
+
+1234546947 c:\documents and settings\gil\os meus documentos\programing\sore\sore\utilities\typeutils.h
+	<string>
+	<sstream>
+	<math.h>
+
+1232451760 c:\documents and settings\gil\os meus documentos\programing\sore\sore\core\point.h
+	"../Files/AReadable.h"
+
+1234216510 c:\documents and settings\gil\os meus documentos\programing\sore\sore\core\collectionwithframes.h
+	<vector>
+	<string>
+	"../Files/ACollection.h"
+	"../Invariants/GameInvariants.h"
+	"Goodie.h"
+	"Weapon.h"
+
+1229712927 c:\documents and settings\gil\os meus documentos\programing\sore\sore\core\goodie.h
+	"../Files/AReadable.h"
+	"../Files/FileUtils.h"
+
+1232383294 c:\documents and settings\gil\os meus documentos\programing\sore\sore\core\weapon.h
+	"../Files/AReadable.h"
+	"../Utilities/TypeUtils.h"
+	"HitFrame.h"
+	"Point.h"
+	"Vector3D.h"
+
+1234523242 c:\documents and settings\gil\os meus documentos\programing\sore\sore\core\vector3d.h
+	"../Files/AReadable.h"
+
+1229714060 source:c:\documents and settings\gil\os meus documentos\programing\sore\sore\tests\hashtests.cpp
+	"../Utilities/HashMap.h"
+	<iostream>
+	<string>
+
+1230073339 c:\documents and settings\gil\os meus documentos\programing\sore\sore\utilities\hashmap.h
+	<ext/hash_map>
+	<hash_map>
+
+1230292881 c:\documents and settings\gil\os meus documentos\programing\sore\sore\core\pallet.h
+	"Vector3D.h"
+	"../Files/AFileResolver.h"
+	"../Utilities/HashMap.h"
+	<SFML/Graphics.hpp>
+
+1232618942 c:\documents and settings\gil\os meus documentos\programing\sore\sore\core\character.h
+	<vector>
+	<string>
+	"../Files/AFileResolver.h"
+	"../Utilities/HashMap.h"
+	"Animation.h"
+
+1234543115 c:\documents and settings\gil\os meus documentos\programing\sore\sore\core\animation.h
+	<vector>
+	<map>
+	"../Files/AReadable.h"
+	"Vector3D.h"
+	"../Utilities/HashMap.h"
+	"FixedFrame.h"
+	"KeyFrame.h"
+
+1230044721 c:\documents and settings\gil\os meus documentos\programing\sore\sore\core\fixedframe.h
+	"HeadPoint.h"
+	"WeaponPoint.h"
+	"GrabPoint.h"
+
+1229680051 c:\documents and settings\gil\os meus documentos\programing\sore\sore\core\headpoint.h
+	"Point.h"
+
+1229679996 c:\documents and settings\gil\os meus documentos\programing\sore\sore\core\weaponpoint.h
+	"Point.h"
+
+1229680067 c:\documents and settings\gil\os meus documentos\programing\sore\sore\core\grabpoint.h
+	"Point.h"
+
+1234798158 c:\documents and settings\gil\os meus documentos\programing\sore\sore\core\keyframe.h
+	"Point.h"
+	"Vector3D.h"
+	"../Utilities/TypeUtils.h"
+	"../Invariants/GameInvariants.h"
+	"HitFrame.h"
+	"../Files/AReadable.h"
+
+1234801709 c:\documents and settings\gil\os meus documentos\programing\sore\sore\invariants\gameinvariants.h
+	"..\Utilities\TypeUtils.h"
+
+1230023626 c:\documents and settings\gil\os meus documentos\programing\sore\sore\engine\database.h
+	<vector>
+	"../Invariants/GameInvariants.h"
+	"../Utilities/HashMap.h"
+	"../Core/Character.h"
+	"../Core/FramesCollection.h"
+	"../Core/Pallet.h"
+
+1229961388 c:\documents and settings\gil\os meus documentos\programing\sore\sore\core\imagescollection.h
+	"../Files/ACollection.h"
+	"Frame.h"
+	"Pallet.h"
+
+1231413053 c:\documents and settings\gil\os meus documentos\programing\sore\sore\core\database.h
+	<vector>
+	"../Invariants/GameInvariants.h"
+	"../Utilities/HashMap.h"
+	"../Core/Character.h"
+	"../Core/FramesCollection.h"
+	"../Core/Pallet.h"
+
+1231411066 c:\documents and settings\gil\os meus documentos\programing\sore\sore\core\characterheader.h
+	<string>
+	"CharSprite.h"
+	"../Utilities/TypeUtils.h"
+	"../Core/Character.h"
+	"../Core/FramesCollection.h"
+	"../Core/Pallet.h"
+
+1234803188 c:\documents and settings\gil\os meus documentos\programing\sore\sore\core\charsprite.h
+	"ActiveSprite.h"
+	"../Utilities/TypeUtils.h"
+	"../Core/Character.h"
+	"../Core/CharacterHeader.h"
+	"../Core/FramesCollection.h"
+	"../Core/Pallet.h"
+	"../Core/ASpriteController.h"
+
+1234650807 c:\documents and settings\gil\os meus documentos\programing\sore\sore\game\charactercontroller.h
+
+1232620937 c:\documents and settings\gil\os meus documentos\programing\sore\sore\core\aspritecontroller.h
+
+1234798251 c:\documents and settings\gil\os meus documentos\programing\sore\sore\core\hitframe.h
+	"../Utilities/TypeUtils.h"
+	"Point.h"
+	"Vector3D.h"
+
+1234639004 c:\documents and settings\gil\os meus documentos\programing\sore\sore\core\activesprite.h
+	<SFML/Graphics.hpp>
+	"../Utilities/TypeUtils.h"
+	"../Core/HitInfo.h"
+
+1234638491 c:\documents and settings\gil\os meus documentos\programing\sore\sore\core\hitinfo.h
+	"HitFrame.h"
+	"ActiveSprite.h"
+	"../Utilities/TypeUtils.h"
+

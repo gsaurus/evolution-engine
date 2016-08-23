@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="SORE">
+		<Project filename="Files\Files.cbp">
+			<Depends filename="Utilities\Utilities.cbp" />
+		</Project>
+		<Project filename="Tests\Tests.cbp" active="1">
+			<Depends filename="Files\Files.cbp" />
+			<Depends filename="Core\Core.cbp" />
+			<Depends filename="Utilities\Utilities.cbp" />
+			<Depends filename="Game\Game.cbp" />
+			<Depends filename="Invariants\Invariants.cbp" />
+		</Project>
+		<Project filename="Core\Core.cbp">
+			<Depends filename="Files\Files.cbp" />
+			<Depends filename="Utilities\Utilities.cbp" />
+			<Depends filename="Invariants\Invariants.cbp" />
+		</Project>
+		<Project filename="Utilities\Utilities.cbp" />
+		<Project filename="Game\Game.cbp">
+			<Depends filename="Files\Files.cbp" />
+			<Depends filename="Core\Core.cbp" />
+			<Depends filename="Utilities\Utilities.cbp" />
+			<Depends filename="Invariants\Invariants.cbp" />
+		</Project>
+		<Project filename="Invariants\Invariants.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>

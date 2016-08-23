@@ -1,0 +1,113 @@
+384 224		// 480 360 // game resolution
+0		      // 0 = window, 1 = fullscreen
+
+sor2
+
+your song here.ogg
+
+sor2 beach.scn
+2048 226
+
+
+Abadede.ch
+0 0 0		   // body  head  pallete
+7           // layer
+120 0 210	// coordinates (x,y,z)
+-1		      // -1 = pl1 ; -2 = pl2 ; -3 = pl3 ; >0 = AI0
+
+
+Max.ch
+0 0 0
+7
+12420 0 210
+5
+
+
+Max.ch
+0 0 1
+7
+2000 0 270
+4
+
+
+Kickboxer2.ch
+0 0 0
+7
+780 0 158
+4
+
+
+
+
+ff1e2.ch
+0 0 0
+7
+8490 0 258
+4
+
+shopping biker.ch
+0 0 0
+7
+12480 0 200
+1
+
+
+Garcia2.ch
+0 0 0
+7
+14280 0 205
+3
+
+Skate2.ch
+0 0 0
+7
+3620 0 210
+2
+
+
+Skate2.ch
+0 0 1
+7
+1420 0 220
+4
+
+
+Zanza.ch
+0 0 0
+7
+1980 0 210
+5
+
+
+Garcia2.ch
+0 0 0
+7
+880 0 195
+1
+
+
+
+
+ga Longmoan.ch
+0 0 4
+7
+2820 0 220
+1
+
+
+
+
+Axel1.ch
+0 0 2
+7
+3820 0 190
+5
+
+
+Haku-oh1.ch
+0 0 0
+7
+18820 0 200
+4
+
+

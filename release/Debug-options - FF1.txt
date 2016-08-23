@@ -1,0 +1,173 @@
+384 224		// game resolution
+0		// 0 = window, 1 = fullscreen
+
+ff1
+
+Beatnik On The Ship(Beta).ogg
+
+ff1 subway.scn
+1440 224    // scene dimensions
+
+
+
+Haggar1.ch
+0 0 0		   // body  head  pallete
+6           // layer
+180 0 180	// coordinates (x,y,z)
+-1		      // -1 = pl1 ; -2 = pl2 ; -3 = pl3 ; >=0 = AI0
+
+
+ga Gilius.ch
+0 0 1		   // body  head  pallete
+6           // layer
+130 0 220	// coordinates (x,y,z)
+-2		      // -1 = pl1 ; -2 = pl2 ; -3 = pl3 ; >=0 = AI0
+
+
+
+Haggar1.ch
+0 0 2
+2
+160 0 260
+-3
+
+
+
+
+
+
+ff1e1.ch
+0 0 3
+6
+870 0 210
+1
+
+ff1e2.ch
+0 0 3
+6
+994 0 205
+2
+
+
+
+
+
+
+
+
+ff1e1.ch
+0 0 2
+2
+1280 0 255
+0
+
+
+ff1e1.ch
+0 0 2
+2
+770 0 250
+1
+
+ff1e2.ch
+0 0 0
+2
+1140 0 245
+2
+
+
+
+
+
+
+
+
+
+
+
+ff1e1.ch
+0 0 3
+4
+4728 0 160
+1
+
+ff1e2.ch
+0 0 1
+4
+5790 0 159
+2
+
+ff1e1.ch
+0 0 0
+4
+4120 0 160
+1
+
+ff1e2.ch
+0 0 2
+4
+4810 0 159
+2
+
+
+ff1e1.ch
+0 0 1
+4
+5560 0 160
+0
+
+
+
+ff1e1.ch
+0 0 3
+4
+5070 0 160
+1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ff1e1.ch
+0 0 1
+4
+5980 0 160
+0
+
+
+ff1e1.ch
+0 0 3
+4
+5200 0 160
+0
+
+ff1e2.ch
+0 0 1
+4
+5990 0 159
+2
+
+ff1e1.ch
+0 0 0
+4
+5175 0 160
+1
+
+
+
+ff1e1.ch
+0 0 1
+4
+5800 0 160
+0
+
+

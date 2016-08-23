@@ -1,0 +1,54 @@
+384 224	// game resolution
+0		   // 0 = window, 1 = fullscreen
+
+sor1
+
+Beatnik On The Ship(Beta).ogg
+
+sor1 lvl5.scn
+1550 256
+
+
+
+
+
+Axel1.ch
+0 0 0
+5
+370 0 210
+-1
+
+
+
+//Skate2.ch
+//0 0 0
+//5
+//400 0 220
+//-2
+
+
+
+//Y-Signal1.ch
+//0 0 0		// body  head  pallete
+//5
+//400 0 230	// coordinates (x,y,z)
+//-1		// -1 = pl1 ; -2 = pl2 ; -3 = pl3 ; >0 = AI0
+
+
+
+
+
+//Garcia1.ch
+//0 0 0		// body  head  pallete
+//5
+//350 0 210	// coordinates (x,y,z)
+//-1		// -1 = pl1 ; -2 = pl2 ; -3 = pl3 ; >0 = AI0
+
+
+
+
+//Electra1.ch
+//0 0 0		// body  head  pallete
+//5
+//370 0 210	// coordinates (x,y,z)
+//-1		// -1 = pl1 ; -2 = pl2 ; -3 = pl3 ; >0 = AI0
