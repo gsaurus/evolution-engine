@@ -6,7 +6,7 @@ EvE - The original project
  src folder is probably not the latest code, but should be easier to compile.
  There are zip files containing later code (20-12-2009), but may be missing other dependencies (?)
  
- The executable is built from a Test
+ The executable is built from MainTest.cpp
  
  
  New EvE - I couldn't find the latest code of new EvE, but found some network experiments that preceded it.
